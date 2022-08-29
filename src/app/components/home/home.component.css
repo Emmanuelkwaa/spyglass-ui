@@ -1,0 +1,84 @@
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 1,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
+
+.home {
+    display: flex;
+    height: 100vh;
+}
+
+.side-nav {
+    width: 180px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    padding: 10px;
+    max-height: 100vh;
+    border-right: 0.3px rgb(247,248,251) solid;
+}
+
+.logo-box {
+    padding: 0.3rem;
+    border: 1px solid black;
+}
+
+.logo-text {
+    font-family: 'Satisfy', cursive;
+    color: black;
+    font-size: 1.5rem;
+}
+
+nav ul {
+    padding-left: 0;
+}
+
+.menu-item {
+    list-style: none;
+    align-content: center;
+    font-size: 16px;
+    margin-bottom: 12px;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.menu-item:hover {
+    background-color: rgb(247,248,251);
+}
+
+.menu-item span {
+    font-size: 14px;
+}
+
+.content {
+    width: 100%;
+    height: 100vh;
+}
+
+.content header {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    padding: 10px;
+    column-gap: 10px;
+}
+
+.profile-img {
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+}
+
+header p {
+    margin: 0;
+}
+
+.content-body {
+    background-color: rgb(247,248,251);
+    height: 100%;
+}

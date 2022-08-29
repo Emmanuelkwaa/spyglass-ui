@@ -1,0 +1,37 @@
+<main class="home container">
+    <section class="side-nav">
+        <div class="logo">
+            <div class="logo-box">
+                <span class="logo-text">Spyglass</span>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li *ngFor="let menuItem of menuItems" class={{menuItem.className}}>
+                    <span class="material-symbols-outlined">
+                        {{menuItem.icon}}
+                    </span>
+                    {{menuItem.title}}
+                </li>
+            </ul>
+        </nav>
+    </section>
+    
+    <section class="content">
+        <header>
+            <!-- <span class="material-symbols-outlined">
+                person
+            </span> -->
+            <img class="profile-img" src="../../../assets/pexels-pixabay-56866.jpg" alt="">
+            <p>John Doe </p>
+            <div>
+                <span class="material-symbols-outlined">
+                    expand_more
+                </span>
+            </div>
+        </header>
+        <section class="content-body">
+
+        </section>
+    </section>
+</main>
