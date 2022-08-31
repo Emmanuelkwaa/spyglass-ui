@@ -1,0 +1,47 @@
+<div class="main">
+    <h1>Goals</h1>
+    <div class="search-and-create">
+        <div class="search">
+            <form [formGroup]="searchForm">
+                <div class="search-goal">
+                    <mat-form-field appearance="outline">
+                        <mat-icon matPrefix style="margin-right: 0.8rem;">search</mat-icon>
+                        <mat-label>Search goal</mat-label>
+                        <input formControlName="search" matInput #input placeholder="Ex. Vacation">
+                    </mat-form-field>
+                    <div class="search-button">
+                        <button mat-flat-button (click)="findGoal()">
+                            <!-- <mat-icon matPrefix style="margin-right: 0.8rem;">arrow_right_alt</mat-icon> -->
+                            Search
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <div class="create">
+            <div class="create-button">
+                <button mat-flat-button color="warn" (click)="findGoal()">
+                    <mat-icon matPrefix >add</mat-icon>
+                    Create
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="goal-tabs">
+        <mat-tab-group animationDuration="0ms">
+            <mat-tab label="Personal" class="goal-tab">
+                <mat-card>Simple card</mat-card>
+                <mat-card>Simple card</mat-card>
+                <mat-card>Simple card</mat-card>
+            </mat-tab>
+            <mat-tab label="Team" class="goal-tab">
+                <mat-card>Simple card</mat-card>
+                <mat-card>Simple card</mat-card>
+                <mat-card>Simple card</mat-card>
+            </mat-tab>
+            <mat-tab label="Life Improvement" class="goal-tab">Content 3</mat-tab>
+          </mat-tab-group>
+    </div>
+</div>

@@ -1,0 +1,26 @@
+.search-and-create {
+    display: flex;
+    justify-content: space-between;
+}
+
+.search-goal {
+    display: flex;
+    gap: 5px;
+    justify-content: start;
+    align-content: center;
+}
+
+.search-goal mat-form-field {
+    font-size: 10px;
+}
+
+.search-button button {
+    margin-top: 3px;
+    font-size: 0.8rem;
+    color: white;
+    background-color: #3f51bf;
+}
+
+mat-card{
+    margin-top: 10px;
+}

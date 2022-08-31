@@ -16,17 +16,20 @@ export class HomeComponent implements OnInit {
     {
       title: 'Home',
       className: 'menu-item',
-      icon: 'home'
+      icon: 'home',
+      path: '/'
     },
     {
       title: 'Completed',
       className: 'menu-item',
-      icon: 'check'
+      icon: 'check',
+      path: '/completed'
     },
     {
       title: 'Friends',
       className: 'menu-item',
-      icon: 'group'
+      icon: 'group',
+      path: '/friends'
     }
   ]
 

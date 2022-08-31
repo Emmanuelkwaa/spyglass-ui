@@ -50,6 +50,11 @@ nav ul {
     background-color: rgb(247,248,251);
 }
 
+.menu-item a {
+    text-decoration: none;
+    color: black;
+}
+
 .menu-item span {
     font-size: 14px;
 }
@@ -82,4 +87,5 @@ header p {
 .content-body {
     background-color: rgb(247,248,251);
     height: 100%;
+    padding: 20px;
 }
