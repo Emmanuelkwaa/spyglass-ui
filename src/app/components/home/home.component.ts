@@ -30,6 +30,12 @@ export class HomeComponent implements OnInit {
       className: 'menu-item',
       icon: 'group',
       path: '/friends'
+    },
+    {
+      title: 'Login',
+      className: 'menu-item',
+      icon: 'login',
+      path: '/login'
     }
   ]
 

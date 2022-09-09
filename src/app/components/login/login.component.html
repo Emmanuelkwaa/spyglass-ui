@@ -1,0 +1,19 @@
+<section class="login">
+    <form class="login-form" [formGroup] = "Login" (ngSubmit)="authenticate()">
+        <mat-form-field appearance="outline">
+            <mat-label>Email</mat-label>
+            <input type="email" formControlName="email" matInput #input placeholder="Ex. johndoe@mail.com">
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Password</mat-label>
+            <input type="password" formControlName="password" matInput #input>
+        </mat-form-field>
+
+        <div class="button-row">
+            <button type="submit" mat-raised-button color="primary" >
+                Login
+            </button>
+        </div>
+    </form>
+</section>

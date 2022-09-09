@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -18,6 +18,13 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
 import {MatTabsModule} from '@angular/material/tabs';
+import { LoginComponent } from './components/login/login.component';
+import { TokenInterceptorService } from './services/token-interceptor.service';
+import {MatDialogModule} from '@angular/material/dialog';
+import { EditGoalComponent } from './components/edit-goal/edit-goal.component';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import { MatMomentDateModule } from '@angular/material-moment-adapter';
+import { CreateComponent } from './components/create/create.component';
 
 
 
@@ -27,7 +34,10 @@ import {MatTabsModule} from '@angular/material/tabs';
     HomeComponent,
     CompletedComponent,
     FriendsComponent,
-    MainComponent
+    MainComponent,
+    LoginComponent,
+    EditGoalComponent,
+    CreateComponent
   ],
   imports: [
     BrowserModule,
@@ -43,8 +53,11 @@ import {MatTabsModule} from '@angular/material/tabs';
     MatButtonModule,
     MatButtonToggleModule,
     MatTabsModule,
+    MatDialogModule,
+    MatDatepickerModule,
+    MatMomentDateModule
   ],
-  providers: [],
+  providers: [{provide:HTTP_INTERCEPTORS, useClass:TokenInterceptorService,multi:true}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

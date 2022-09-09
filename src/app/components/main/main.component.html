@@ -21,7 +21,7 @@
 
         <div class="create">
             <div class="create-button">
-                <button mat-flat-button color="warn" (click)="findGoal()">
+                <button mat-flat-button color="warn" (click)="createGoal()">
                     <mat-icon matPrefix >add</mat-icon>
                     Create
                 </button>
@@ -32,9 +32,30 @@
     <div class="goal-tabs">
         <mat-tab-group animationDuration="0ms">
             <mat-tab label="Personal" class="goal-tab">
-                <mat-card>Simple card</mat-card>
-                <mat-card>Simple card</mat-card>
-                <mat-card>Simple card</mat-card>
+                <div *ngFor="let goal of goals;">
+                    <mat-card class="card">
+                        <img class="profile-img" src={{goal.picture}} alt="goal picture"> 
+                        <div class="name-desc">
+                            <p class="desc">{{goal.description}}</p>
+                            <h4 class="goal-name">{{goal.name}}</h4>
+                        </div>
+                        <div class="target-date">
+                            <button disabled mat-flat-button (click)="findGoal()">
+                                <mat-icon matPrefix >schedule</mat-icon>
+                                {{goal.targetDate | date: 'M/d/yy'}}
+                            </button>
+                        </div>
+                        <div class="percent-complete">
+                            <h4 class="percent">{{calculatePercent(goal.currentlySaved, goal.targetAmount)}} % completed</h4>
+                        </div>
+                        <div class="edit-button">
+                            <button mat-flat-button style="background-color: rgb(147, 214, 147);" (click)="editGoal(goal)">
+                                <mat-icon matPrefix >edit</mat-icon>
+                                Edit
+                            </button>
+                        </div>
+                    </mat-card>
+                </div>
             </mat-tab>
             <mat-tab label="Team" class="goal-tab">
                 <mat-card>Simple card</mat-card>

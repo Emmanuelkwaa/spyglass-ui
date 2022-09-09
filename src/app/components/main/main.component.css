@@ -21,6 +21,28 @@
     background-color: #3f51bf;
 }
 
-mat-card{
+.card{
     margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.profile-img {
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+}
+
+.desc {
+    font-size: 12px;
+    margin: 0;
+}
+
+.goal-name {
+    margin: 0;
+}
+
+.percent{
+    margin: 0;
 }
