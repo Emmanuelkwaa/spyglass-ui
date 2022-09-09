@@ -82,6 +82,20 @@ export class MainComponent implements OnInit {
     })
   }
 
+  delete(goal:Goal) {
+    this.goalService.delete(goal.id)
+    .subscribe({
+      next: (res) => {
+        if(res.isSuccess){
+          alert("deleted")
+        }
+      },
+      error: (err) => {
+        alert(err.message);
+      }
+    })
+  }
+
   detectMob() {
     const toMatch = [
       /Android/i,
@@ -97,5 +111,6 @@ export class MainComponent implements OnInit {
       return navigator.userAgent.match(toMatchItem);
     });
   }
+
 
 }

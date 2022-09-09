@@ -1,6 +1,7 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { Goal } from 'src/app/models/Goal';
 import { GoalService } from 'src/app/services/goal.service';
 import { EditGoalComponent } from '../edit-goal/edit-goal.component';
 
@@ -31,7 +32,19 @@ export class CreateComponent implements OnInit {
   }
 
   createGoal() {
+    if(this.createForm.valid){
+      this.goalService.createGoals(this.createForm.value)
+      .subscribe({
+        next: (res) => {
+          this.dialogRef.close('create');
+          console.log(res)
+        },
+        error: (err) => {
+          alert(err.message);
+        }
+      })}
+    }
+
     
-  }
 
 }

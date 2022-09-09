@@ -17,11 +17,15 @@ export class GoalService {
     return this.http.get<Result>(`${environment.baseUrl}${this.goalUrl}`);
   }
 
-  createGoals(goal :Goal) :Observable<Result> {
+  createGoals(goal :any) :Observable<Result> {
     return this.http.post<Result>(`${environment.baseUrl}${this.goalUrl}`, goal);
   }
 
   updateGoal(goal: Goal) :Observable<Result> {
     return this.http.put<Result>(`${environment.baseUrl}${this.goalUrl}/${goal.id}`, goal)
+  }
+
+  delete(id: any): Observable<any> {
+    return this.http.delete<any>(`${environment.baseUrl}${this.goalUrl}/${id}`);
   }
 }
